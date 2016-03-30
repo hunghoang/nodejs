@@ -3,10 +3,9 @@ var appRouter = function(app) {
 		res.send("Hello world");
 	});
 
-	app.get("/books/:id", function(req, res) {
-		res.send({id:req.params.id, name:"Book"});
+	app.get('/staffs', function(req, res) {
+        	res.send([{firstName:'Hoang', lastName:'Nguyen', staffId: 1}, {firstName:'Minh', lastName:'Le', staffId: 2}]);
 	});
-
-
+		
 }
 module.exports = appRouter;
